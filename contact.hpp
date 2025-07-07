@@ -1,7 +1,7 @@
 #pragma once
 #include<string>
 #include<vector>
-struct contact
+struct Contact
 {
     std::string name;
     std::string phone;
@@ -9,6 +9,8 @@ struct contact
 };
 
 class ContactBook { 
+
+    std::vector<Contact> contacts;
 public:
     void add_contact();
     void delete_contact();

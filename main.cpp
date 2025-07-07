@@ -14,5 +14,40 @@ void show_menu(){
 }
 
 int main(){
+    ContactBook book;
+    int choice;
 
+    while (true)
+    {
+        show_menu();
+        std::cin>>choice;
+        std::cin.ignore();
+
+        switch(choice){
+            case 1:
+                    book.add_contact();
+                    break;
+            case 2:
+                    book.delete_contact();
+                    break;
+            case 3:
+                    book.view_contact();
+                    break;
+            case 4:
+                    book.search_contact();
+                    break;
+            case 5:
+                    book.save_to_file("contacts.txt");
+                    break;
+            case 6:
+                    book.load_from_file("contacts.txt");
+                    break;
+            case 7:
+                    std::cout<<"\n Exiting.......\n";
+                    return 0;
+            default:
+                    std::cout<<"Invalid Choice\n";
+        }
+    }
+    
 }
